@@ -8,5 +8,11 @@ if test "`cd $srcdir; /bin/pwd`" = "`/bin/pwd`"; then
   AC_MSG_ERROR([you must configure in a separate build directory])
 fi
 
+# List of architectures supported
+arch_dirs=$srcdir/arch
+AC_MSG_CHECKING(arch_dirs)
+echo "" # For newline
+
+
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
