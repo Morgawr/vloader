@@ -47,7 +47,7 @@ _dl_start_user:
 	pushl %eax
 	pushl %ebp
 	pushl %esi
-	// Clear %ebp so that even constructors hae terminated backchain.
+	// Clear %ebp so that even constructors have terminated backchain.
 	xorl %ebp, %ebp
 	// Call the function to run the initializers
 	call _dl_init_internal@PLT
@@ -58,7 +58,7 @@ _dl_start_user:
 	// Jump to the user's entry point
 	jmp *%edi
 
-	.previous
+.previous
 
 
 
