@@ -1,8 +1,17 @@
 #include "include/config.h"
 #include <stdio.h>
+#include <elf.h>
+#include <link.h>
 
-int main()
+/* machine dependent entry point */
+#include <entry_S.h>
+RTLD_ENTRY
+/* end of machine dependent entry point */
+
+/* Actual C entry point of the rtld */
+static ElfW(Addr) _dl_start(void *arg)
 {
-	printf("Empty vloader test!\n");
-	return 0;
+	return 0; //stub
 }
+
+
